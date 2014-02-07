@@ -25,7 +25,7 @@ while block_for_change; do
   if [ $? -ne 0 ] 
   then
     echo -e "${red}Failure${default}"
-    notify-send --urgency=low "Build Failed" "${BUILD_COMMAND} \($(basename $(pwd))\)"
+    notify-send  "Build Failed" "${BUILD_COMMAND} \($(basename $(pwd))\)"
   else
     echo -e "${green}Success${default}"
   fi	
